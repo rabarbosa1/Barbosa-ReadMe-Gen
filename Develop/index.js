@@ -48,7 +48,7 @@ const questions = [
         type: 'list',
         message: 'What is the project license?',
         name: 'License',
-        choices: ['None', 'MIT License', 'Mozilla Public License 2.0', ]
+        choices: ['None', 'MIT License', ]
     },
     {
         type: 'input',
@@ -120,11 +120,8 @@ renderLicenseBadge = (data) => {
     // console.log(licenseType)
 
     
-    if (licenseType === 'Mozilla Public License 2.0') {
-        licenseBadge = `![License: Mozilla Public License 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)`
-       
-        return licenseBadge
-    } else if (licenseType === 'MIT License') {
+ 
+    if (licenseType === 'MIT License') {
         licenseBadge = `![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)`
        
         return licenseBadge
