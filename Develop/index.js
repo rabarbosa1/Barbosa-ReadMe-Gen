@@ -69,11 +69,11 @@ const createReadme = (answers) =>
 ${renderLicenseBadge(answers.License)}
     
 ## Table of Contents
-* [Description](#project-description)
-* [Installation](#installation-instructions)
+* [Description](#description)
+* [Installation](#installation)
 * [Usage](#usage-instructions)
-* [Contribution](#contribution-guidelines)
-* [Test Instructions](#test-instructions)
+* [Contribution](#contribution)
+* [Test Instructions](#test)
 * [License](#license)
 * [Questions](#questions)
 ## Project Description
@@ -91,8 +91,8 @@ ${answers.License}
 ${licenseDescription}
 ## Questions
 For questions you can find me on Github or via my email:
-My Github profile is https://github.com/${answers['Github Username']}
-My email address is: ${answers['Email Address']}
+My Github  is https://github.com/${answers['Github Username']}
+My email address &#128140; is: ${answers['Email Address']}
 `
 
 // TODO: Create a function to initialize app
