@@ -96,12 +96,14 @@ My email address is: ${answers['Email Address']}
 `
 
 // TODO: Create a function to initialize app
+
 function promptQuestions() {
     inquirer.prompt(questions)
     .then((data) => {
         console.log(data)
         fs.writeFile('README.md', createReadme(data), () => {
             console.log('success')
+            
         })
     })
     .catch((error) => {
@@ -115,19 +117,21 @@ function promptQuestions() {
 
 renderLicenseBadge = (data) => {
     licenseType = data
+    // console.log(licenseType)
 
-   if (licenseType === 'Mozilla Public License 2.0') {
+    
+    if (licenseType === 'Mozilla Public License 2.0') {
         licenseBadge = `![License: Mozilla Public License 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)`
-        // console.log(licenseBadge)
+       
         return licenseBadge
     } else if (licenseType === 'MIT License') {
         licenseBadge = `![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)`
-        // console.log(licenseBadge)
+       
         return licenseBadge
     } else {
         licenseExplained = 'There is no license chosen for this project.'
         return 'There is no license chosen for this project.'
     }
 }
-
 promptQuestions()
+// Function call to initialize app
